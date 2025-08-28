@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Comic+Relief:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0d3c5e0995.js" crossorigin="anonymous"></script></head>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+<body>
+
+<header>
+    <nav class="desktop-nav">
+        <span class="brand-name">Kingsmart Downloader</span>
+        <ul>
+            <li><a href="/" >Home</a></li>
+            <li><a href="/api">API</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Faq's</a></li>
+        </ul>
+
+        <i class='bx  bx-menu-right' id="menu-bar" onclick="openSideBar()" ></i>
+    </nav>
+
+        <div class="overlay"></div>    
+        <ul class="sidebar">
+            <i class='bx  bx-x' id='close-btn' onclick="closeSideBar()" ></i> 
+            <li><a href="/" >Home</a></li>
+            <li><a href="/api">API</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Faq's</a></li>
+        </ul>
+    
+</header>
+
+<script>
+  // highlight current page
+  const links = document.querySelectorAll(".desktop-nav a");
+  const currentUrl = window.location.pathname;
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentUrl) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+<script>
+function closeSideBar() {
+  document.querySelector('.sidebar').classList.remove('active');
+  document.querySelector('.overlay').classList.remove('active');
+}
+
+function openSideBar() {
+  document.querySelector('.sidebar').classList.add('active');
+  document.querySelector('.overlay').classList.add('active');
+}
+</script>
+
+
+</body>
+</html>
