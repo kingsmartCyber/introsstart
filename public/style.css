@@ -110,6 +110,26 @@ header{
     text-decoration: none;
     color: #413839;
     font-size: clamp(0.85rem, 2vw, 1rem);
+    position: relative;
+}
+
+.sidebar a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--text-color);
+    transition: width 0.5s ease;
+}
+
+.sidebar a:hover:after{
+    width: 100%;
+}
+
+.sidebar a.active::after{
+    width: 100%;
 }
 
 #close-btn{
