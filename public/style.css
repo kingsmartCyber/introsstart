@@ -18,7 +18,7 @@ body{
 
 header{
     background: var(--nav-bg-color);
-    box-shadow: 0 0 6px #4287f5;
+    box-shadow: 0 0 2px #4287f5;
     top: 0;
     z-index: 999;
     position: sticky;
@@ -91,7 +91,7 @@ header{
     display: flex;
     flex-direction: column;
     background: var(--bg-color);
-    box-shadow: 0 0 4px var(--text-color);
+    box-shadow: 0 0 2px var(--text-color);
     z-index: 999;
     top: 0;
     width: 250px;
